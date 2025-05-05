@@ -1,0 +1,241 @@
+.hero {
+    padding: 4px 1px;
+    background: linear-gradient(to bottom, #ffffff, #f8fafc);
+    min-height: calc(90vh - 64px);
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  
+  .hero-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  
+  .hero-content {
+    padding-right: 24px;
+  }
+  
+  .hero-title {
+    font-size: 5.5rem;
+    font-weight: 9000;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    letter-spacing: -0.02em;
+    color: #1a202c;
+    text-align: center;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: #4a5568;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  
+  .search-container {
+    position: relative;
+    margin-bottom: 48px;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 1.125rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    background: white;
+    transition: all 0.2s ease;
+  }
+  
+  .search-input:focus {
+    outline: none;
+    border-color: #4a90e2;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+  }
+  
+  .search-button {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .search-button:hover {
+    background: #357abd;
+  }
+  
+  .featured-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .featured-text {
+    color: #718096;
+    font-size: 0.875rem;
+  }
+  
+  .featured-logos {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  
+  .featured-logo {
+    color: #4a5568;
+    font-weight: 600;
+    font-size: 1rem;
+    opacity: 0.7;
+  }
+  
+  .hero-image {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 3/3;
+   
+      
+  }
+  
+  .main-image {
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    border-top-left-radius: 500px;
+    border-top-right-radius: 500px;
+      
+      
+
+  }
+  
+  .offer-bubble {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+    padding: 8px 16px;
+    border-radius: 100px;
+    color: white;
+    gap: 12px;
+  }
+  
+  .offer-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #4a90e2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+  }
+  
+  .offer-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .offer-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .offer-type {
+    font-size: 0.75rem;
+    opacity: 0.8;
+  }
+  
+  .offer-amount {
+    font-weight: 600;
+    font-size: 1rem;
+  }
+  
+  .offer-bubble.highest {
+    top: 24px;
+    right: 24px;
+  }
+  
+  .offer-bubble.cash {
+    top: 50%;
+    right: 32px;
+  }
+  
+  .offer-bubble.new {
+    bottom: 32px;
+    right: 48px;
+  }
+  
+  @media (max-width: 1024px) {
+    .hero-title {
+      font-size: 3.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      padding: 32px 16px;
+    }
+  
+    .hero-container {
+      grid-template-columns: 1fr;
+      gap: 32px;
+    }
+  
+    .hero-content {
+      padding-right: 0;
+      text-align: center;
+    }
+  
+    .hero-title {
+      font-size: 2.5rem;
+    }
+  
+    .featured-section {
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .featured-logos {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .offer-bubble {
+      padding: 6px 12px;
+    }
+  
+    .offer-avatar {
+      width: 24px;
+      height: 24px;
+    }
+  
+    .offer-bubble.highest {
+      top: 16px;
+      right: 16px;
+    }
+  
+    .offer-bubble.cash {
+      top: 45%;
+      right: 24px;
+    }
+  
+    .offer-bubble.new {
+      bottom: 24px;
+      right: 32px;
+    }
+  }
