@@ -1,27 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Search } from 'lucide-react';
 import './Hero.css';
 
 const Hero = () => {
+  const [inputValue, setInputValue] = useState("");
+
   return (
     <section className="hero">
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-title">Make the easy move</h1>
           <p className="hero-subtitle">
-          "Discover the comfort of your next home before you visit. Our immersive virtual tours and detailed listings let you explore every corner with confidence."
+            "Discover the comfort of your next home before you visit. Our immersive virtual tours and detailed listings let you explore every corner with confidence."
           </p>
           
           <div className="search-container">
-            <input
-              type="text"
-              placeholder="Enter your address"
-              className="search-input"
-            />
-            <button className="search-button">
-              <Search size={20} />
-            </button>
-          </div>
+  <div className="input-wrapper">
+    <input
+      type="text"
+      placeholder="Enter your address"
+      className="search-input"
+      value={inputValue}
+      onChange={(e) => setInputValue(e.target.value)}
+    />
+    <button className="search-button">
+      <Search size={20} />
+    </button>
+  </div>
+  {inputValue.trim() && (
+    <a href="#" className="manual-entry">
+    Enter address manually instead
+  </a>
+  
+  )}
+</div>
+
 
           <div className="featured-section">
             <span className="featured-text">Featured in:</span>

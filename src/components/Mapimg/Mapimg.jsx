@@ -19,7 +19,7 @@ const MapSection = () => {
           <h2 className="stats-title">Over 2 million</h2>
           <p className="stats-subtitle">and counting</p>
           <p className="stats-description">
-            Every 60 seconds, a homeowner requests a cash offer from PropertyPro.
+          Every 60 seconds, a new home is sold on HomeScope360.
           </p>
           <button className="cta-button">
             Get Your Dream Home Now
