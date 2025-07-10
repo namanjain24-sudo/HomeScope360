@@ -1,0 +1,223 @@
+.hero-cta-section {
+    padding: 0px 20px;
+    background-color: #ffffff;
+    overflow: hidden;
+    
+  }
+  
+  .hero-cta-container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .hero-cta-content {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    gap: 60px;
+    min-height: 500px;
+  }
+  
+  .hero-image-left,
+  .hero-image-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .circular-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .circular-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .hero-image-left .circular-image {
+    transform: translateX(-50px);
+  }
+  
+  .hero-image-right .circular-image {
+    transform: translateX(50px);
+  }
+  
+  .hero-center-content {
+    text-align: center;
+    padding: 0 40px;
+  }
+  
+  .hero-cta-title {
+    font-size: 56px;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.1;
+    margin: 0 0 24px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
+    letter-spacing: -0.02em;
+  }
+  
+  .hero-cta-subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    color: #6b7280;
+    line-height: 1.4;
+    margin: 0 0 40px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
+  }
+  
+  .hero-cta-button {
+    background-color: #2563eb;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  }
+  
+  .hero-cta-button:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+  }
+  
+  .hero-cta-button:active {
+    transform: translateY(0);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .hero-cta-content {
+      gap: 40px;
+    }
+  
+    .circular-image {
+      width: 250px;
+      height: 250px;
+    }
+  
+    .hero-cta-title {
+      font-size: 48px;
+    }
+  
+    .hero-cta-subtitle {
+      font-size: 18px;
+    }
+  
+    .hero-image-left .circular-image {
+      transform: translateX(-30px);
+    }
+  
+    .hero-image-right .circular-image {
+      transform: translateX(30px);
+    }
+  }
+  
+  @media (max-width: 968px) {
+    .hero-cta-section {
+      padding: 80px 20px;
+    }
+  
+    .hero-cta-content {
+      grid-template-columns: 1fr;
+      gap: 50px;
+      text-align: center;
+    }
+  
+    .circular-image {
+      width: 200px;
+      height: 200px;
+    }
+  
+    .hero-image-left .circular-image,
+    .hero-image-right .circular-image {
+      transform: none;
+    }
+  
+    .hero-image-right {
+      order: 3;
+    }
+  
+    .hero-center-content {
+      order: 2;
+      padding: 0 20px;
+    }
+  
+    .hero-image-left {
+      order: 1;
+    }
+  
+    .hero-cta-title {
+      font-size: 42px;
+    }
+  
+    .hero-cta-subtitle {
+      font-size: 17px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-cta-section {
+      padding: 60px 16px;
+    }
+  
+    .hero-cta-content {
+      gap: 40px;
+    }
+  
+    .circular-image {
+      width: 180px;
+      height: 180px;
+    }
+  
+    .hero-cta-title {
+      font-size: 36px;
+    }
+  
+    .hero-cta-subtitle {
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+  
+    .hero-cta-button {
+      font-size: 16px;
+      padding: 14px 28px;
+    }
+  
+    .hero-center-content {
+      padding: 0 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero-cta-title {
+      font-size: 32px;
+    }
+  
+    .hero-cta-subtitle {
+      font-size: 15px;
+    }
+  
+    .circular-image {
+      width: 150px;
+      height: 150px;
+    }
+  
+    .hero-cta-button {
+      font-size: 15px;
+      padding: 12px 24px;
+    }
+  }
+  

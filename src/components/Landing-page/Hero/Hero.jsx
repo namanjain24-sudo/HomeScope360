@@ -1,12 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
 import './Hero.css';
 
 const Hero = () => {
   const [inputValue, setInputValue] = useState("");
+  const [animate, setAnimate] = useState(false);
+
+  useEffect(() => {
+    setAnimate(true);
+  }, []);
 
   return (
-    <section className="hero">
+    <section className={`hero${animate ? ' hero-animate' : ''}`}>
       <div className="hero-container">
         <div className="hero-content">
           <h1 className="hero-title">Make the easy move</h1>

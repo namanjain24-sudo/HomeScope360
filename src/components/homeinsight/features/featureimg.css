@@ -1,0 +1,8 @@
+.feature-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 35px auto;
+    width: 95%;
+    border-radius: 25px;
+  }

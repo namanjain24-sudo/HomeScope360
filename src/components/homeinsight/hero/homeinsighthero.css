@@ -1,0 +1,354 @@
+.home-hero-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 8px 0;
+    position: relative;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  .home-hero-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 4px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+  }
+  
+  .home-hero-text-section {
+    max-width: 580px;
+    text-align: left;
+  }
+  
+  .beta-join-badge {
+    display: inline-block;
+    color: #353434;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 32px;
+    letter-spacing: 0.025em;
+  }
+  
+  .main-hero-heading {
+    font-size: 4.5rem;
+    font-weight: 400;
+    line-height: 1.05;
+    color: #1d1c1c;
+    margin: 0 0 32px 0;
+    letter-spacing: -0.025em;
+    text-align: left;
+  }
+  
+  .hero-subtitle-text {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #454444;
+    margin: 0 0 48px 0;
+    font-weight: 400;
+    text-align: left;
+  }
+  
+  .address-search-form {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .input-with-search-btn {
+    position: relative;
+    width: 100%;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .input-with-search-btn:focus-within {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15), 0 10px 10px -5px rgba(0, 0, 0, 0.06);
+    transform: translateY(-2px);
+  }
+  
+  .address-input-field {
+    width: 100%;
+    padding: 20px 60px 20px 24px;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    color: #111827;
+    background: transparent;
+    font-weight: 400;
+    border-radius: 50px;
+    box-sizing: border-box;
+  }
+  
+  .address-input-field::placeholder {
+    color: #000000;
+    font-weight: 400;
+  }
+  
+  .search-icon-btn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: #000000;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .search-icon-btn:hover {
+    background: #1f2937;
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .search-icon-btn:active {
+    transform: translateY(-50%) scale(0.95);
+  }
+
+  
+  .house-phone-image {
+    width: 100%;
+    height: auto;
+    max-width: 650px;
+    border-radius: 24px;
+    /* box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); */
+    transition: all 0.3s ease;
+  }
+
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .home-hero-grid {
+      max-width: 1200px;
+      gap: 60px;
+      padding: 0 32px;
+    }
+  
+    .main-hero-heading {
+      font-size: 4rem;
+    }
+  }
+  
+  @media (max-width: 968px) {
+    .home-hero-grid {
+      grid-template-columns: 1fr;
+      gap: 60px;
+      padding: 0 24px;
+    }
+  
+    .home-hero-text-section {
+      max-width: 100%;
+      order: 1;
+      text-align: left;
+    }
+  
+    .home-hero-image-section {
+      order: 2;
+    }
+  
+    .main-hero-heading {
+      font-size: 3.5rem;
+      text-align: left;
+    }
+  
+    .hero-subtitle-text {
+      font-size: 1.1rem;
+      text-align: left;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .home-hero-wrapper {
+      padding: 60px 0;
+    }
+  
+    .home-hero-grid {
+      gap: 48px;
+      padding: 0 20px;
+    }
+  
+    .main-hero-heading {
+      font-size: 3rem;
+      margin-bottom: 24px;
+      text-align: left;
+    }
+  
+    .hero-subtitle-text {
+      font-size: 1rem;
+      margin-bottom: 40px;
+      text-align: left;
+    }
+  
+    .address-input-field {
+      padding: 18px 55px 18px 20px;
+      font-size: 0.95rem;
+    }
+  
+    .search-icon-btn {
+      width: 36px;
+      height: 36px;
+      right: 6px;
+    }
+  
+    .house-phone-image {
+      max-width: 100%;
+      border-radius: 20px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .home-hero-grid {
+      padding: 0 16px;
+    }
+  
+    .main-hero-heading {
+      font-size: 2.5rem;
+      line-height: 1.1;
+      text-align: left;
+    }
+  
+    .hero-subtitle-text {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      text-align: left;
+    }
+  
+    .input-with-search-btn {
+      border-radius: 40px;
+    }
+  
+    .address-input-field {
+      padding: 16px 50px 16px 20px;
+      font-size: 0.9rem;
+      border-radius: 40px;
+    }
+  
+    .search-icon-btn {
+      width: 32px;
+      height: 32px;
+      right: 6px;
+    }
+  
+    .house-phone-image {
+      border-radius: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .home-hero-wrapper {
+      padding: 40px 0;
+    }
+  
+    .home-hero-grid {
+      gap: 40px;
+    }
+  
+    .main-hero-heading {
+      font-size: 2.25rem;
+      text-align: left;
+    }
+  
+    .beta-join-badge {
+      font-size: 0.8rem;
+      padding: 6px 14px;
+      margin-bottom: 24px;
+    }
+  
+    .hero-subtitle-text {
+      margin-bottom: 32px;
+      text-align: left;
+    }
+  }
+  
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+  
+    .beta-join-badge {
+      background: rgba(255, 255, 255, 0.1);
+      color: #000000;
+    }
+  
+    .main-hero-heading {
+      color:#211f1c;
+    }
+  
+    .hero-subtitle-text {
+      color: #2b2b2c;
+    }
+  
+    .input-with-search-btn {
+      background: #f9f9f9;
+      border-color: #d1d1d1;
+    }
+  
+    .address-input-field {
+      color: #f9fafb;
+    }
+  
+    .address-input-field::placeholder {
+      color: #9ca3af;
+    }
+  
+    .search-icon-btn {
+      background: #f9fafb;
+      color: #a6a6a6;
+    }
+  
+    .search-icon-btn:hover {
+      background: #e5e7eb;
+    }
+  }
+  
+  /* Animation for smooth entrance */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .home-hero-text-section > * {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  
+  .beta-join-badge {
+    animation-delay: 0.1s;
+  }
+  
+  .main-hero-heading {
+    animation-delay: 0.2s;
+  }
+  
+  .hero-subtitle-text {
+    animation-delay: 0.3s;
+  }
+  
+  .address-search-form {
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+  
+  .home-hero-image-section {
+    animation: fadeInUp 0.8s ease-out 0.5s forwards;
+    opacity: 0;
+  }
+  

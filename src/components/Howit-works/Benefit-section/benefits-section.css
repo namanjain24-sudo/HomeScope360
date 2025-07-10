@@ -1,0 +1,182 @@
+.benefits-section {
+    padding: 100px 20px;
+    background-color: #ffffff;
+  }
+  
+  .benefits-container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 150px;
+    align-items: start;
+  }
+  
+  .benefits-left {
+    padding-right: 60px;
+    padding-left:50px;
+  }
+  
+  .benefits-main-title {
+    font-size: 45px;
+    font-weight: 400;
+    color: #2d2f32;
+    line-height: 1.1;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
+    letter-spacing: -0.02em;
+  }
+  
+  .benefits-right {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .benefit-item {
+    padding: 40px 0;
+  }
+  
+  .benefit-item:first-child {
+    padding-top: 0;
+  }
+  
+  .benefit-item:last-child {
+    padding-bottom: 0;
+  }
+  
+  .benefit-divider {
+    height: 1px;
+    background-color: #e5e7eb;
+    width: 100%;
+  }
+  
+  .benefit-title {
+    font-size: 20px;
+    font-weight: 350;
+    color: #111827;
+    line-height: 0;
+    margin: 0 0 16px 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
+    letter-spacing: -0.01em;
+  }
+  
+  .benefit-description {
+    font-size: 15px;
+    font-weight: 350;
+    color: #6b7280;
+    line-height: 1.3;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", sans-serif;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .benefits-container {
+      max-width: 1200px;
+    }
+  
+    .benefits-grid {
+      gap: 80px;
+    }
+  
+    .benefits-main-title {
+      font-size: 48px;
+    }
+  
+    .benefit-title {
+      font-size: 24px;
+    }
+  
+    .benefit-description {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 968px) {
+    .benefits-section {
+      padding: 80px 20px;
+    }
+  
+    .benefits-grid {
+      gap: 60px;
+    }
+  
+    .benefits-left {
+      padding-right: 40px;
+    }
+  
+    .benefits-main-title {
+      font-size: 42px;
+    }
+  
+    .benefit-title {
+      font-size: 22px;
+    }
+  
+    .benefit-description {
+      font-size: 17px;
+    }
+  
+    .benefit-item {
+      padding: 32px 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .benefits-section {
+      padding: 60px 16px;
+    }
+  
+    .benefits-grid {
+      grid-template-columns: 1fr;
+      gap: 50px;
+    }
+  
+    .benefits-left {
+      padding-right: 0;
+    }
+  
+    .benefits-main-title {
+      font-size: 36px;
+      margin-bottom: 0;
+    }
+  
+    .benefit-item {
+      padding: 28px 0;
+    }
+  
+    .benefit-title {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+  
+    .benefit-description {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .benefits-section {
+      padding: 50px 16px;
+    }
+  
+    .benefits-main-title {
+      font-size: 32px;
+    }
+  
+    .benefit-title {
+      font-size: 18px;
+    }
+  
+    .benefit-description {
+      font-size: 15px;
+    }
+  
+    .benefit-item {
+      padding: 24px 0;
+    }
+  }
+  

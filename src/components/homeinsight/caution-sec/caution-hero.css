@@ -1,0 +1,301 @@
+.unlock-insights-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  
+  .unlock-insights-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 300px 1fr 300px;
+    gap: 80px;
+    align-items: center;
+  }
+  
+  .house-image-left,
+  .house-image-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .house-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 24px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+  }
+  
+  .house-img:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 35px -5px rgba(0, 0, 0, 0.15), 0 15px 15px -5px rgba(0, 0, 0, 0.06);
+  }
+  
+  .insights-content-center {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .insights-main-heading {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #000000;
+    margin: 0 0 24px 0;
+    letter-spacing: -0.025em;
+  }
+  
+  .insights-subtitle {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: #4b5563;
+    margin: 0 0 48px 0;
+    font-weight: 400;
+  }
+  
+  .browse-homes-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .browse-homes-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(74, 144, 226, 0.3);
+    min-width: 200px;
+    justify-content: center;
+  }
+  
+  .browse-homes-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(74, 144, 226, 0.4);
+    background: linear-gradient(135deg, #357abd 0%, #2563eb 100%);
+  }
+  
+  .browse-homes-button:active {
+    transform: translateY(-1px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1200px) {
+    .unlock-insights-container {
+      grid-template-columns: 280px 1fr 280px;
+      gap: 60px;
+      padding: 0 32px;
+    }
+  
+    .insights-main-heading {
+      font-size: 3rem;
+    }
+  
+    .house-img {
+      height: 350px;
+    }
+  }
+  
+  @media (max-width: 1024px) {
+    .unlock-insights-container {
+      grid-template-columns: 250px 1fr 250px;
+      gap: 40px;
+    }
+  
+    .insights-main-heading {
+      font-size: 2.75rem;
+    }
+  
+    .house-img {
+      height: 320px;
+    }
+  }
+  
+  @media (max-width: 968px) {
+    .unlock-insights-section {
+      padding: 80px 0;
+    }
+  
+    .unlock-insights-container {
+      grid-template-columns: 1fr;
+      gap: 60px;
+      text-align: center;
+      padding: 0 24px;
+    }
+  
+    .house-image-left {
+      order: 1;
+    }
+  
+    .insights-content-center {
+      order: 2;
+    }
+  
+    .house-image-right {
+      order: 3;
+    }
+  
+    .house-img {
+      max-width: 400px;
+      height: 300px;
+      margin: 0 auto;
+    }
+  
+    .insights-main-heading {
+      font-size: 2.5rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .unlock-insights-section {
+      padding: 60px 0;
+    }
+  
+    .unlock-insights-container {
+      gap: 40px;
+      padding: 0 20px;
+    }
+  
+    .insights-main-heading {
+      font-size: 2.25rem;
+      margin-bottom: 20px;
+    }
+  
+    .insights-subtitle {
+      font-size: 1rem;
+      margin-bottom: 32px;
+    }
+  
+    .house-img {
+      max-width: 100%;
+      height: 280px;
+    }
+  
+    .browse-homes-button {
+      padding: 18px 32px;
+      font-size: 1rem;
+      min-width: 180px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .insights-main-heading {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+  
+    .insights-subtitle {
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+  
+    .house-img {
+      height: 250px;
+      border-radius: 20px;
+    }
+  
+    .browse-homes-button {
+      padding: 16px 28px;
+      font-size: 0.95rem;
+      min-width: 160px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .unlock-insights-container {
+      padding: 0 16px;
+    }
+  
+    .insights-main-heading {
+      font-size: 1.75rem;
+    }
+  
+    .house-img {
+      height: 220px;
+      border-radius: 16px;
+    }
+  
+    .browse-homes-button {
+      padding: 14px 24px;
+      font-size: 0.9rem;
+      gap: 8px;
+    }
+  }
+  
+  /* Animation for smooth entrance */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes fadeInRight {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .house-image-left {
+    animation: fadeInLeft 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+  
+  .insights-content-center {
+    animation: fadeInUp 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+  
+  .house-image-right {
+    animation: fadeInRight 0.8s ease-out 0.6s forwards;
+    opacity: 0;
+  }
+  
+  .insights-main-heading {
+    animation: fadeInUp 0.8s ease-out 0.6s forwards;
+    opacity: 0;
+  }
+  
+  .insights-subtitle {
+    animation: fadeInUp 0.8s ease-out 0.8s forwards;
+    opacity: 0;
+  }
+  
+  .browse-homes-section {
+    animation: fadeInUp 0.8s ease-out 1s forwards;
+    opacity: 0;
+  }
+  

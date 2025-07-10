@@ -5,8 +5,18 @@
     display: flex;
     align-items: center;
     overflow-x: hidden;
-    
+    /* Animation */
+    opacity: 0;
+    transform: translateY(40px);
+    animation: hero-fade-in 0.9s cubic-bezier(0.23, 1, 0.32, 1) forwards;
   }
+
+@keyframes hero-fade-in {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
   
   .hero-container {
@@ -265,3 +275,8 @@
       right: 32px;
     }
   }
+
+.hero-animate {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}

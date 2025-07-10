@@ -1,0 +1,131 @@
+.home-features {
+    background-color: #ffffff;
+    margin-top: -70px;
+  }
+  
+  .home-features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  
+  .home-features-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 190px;
+    align-items: center;
+  }
+  
+  .home-features-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: #1f2937;
+    margin: 0;
+    letter-spacing: -0.02em;
+  }
+  
+  .home-features-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .home-feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 24px 0;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .home-feature-item:last-child {
+    border-bottom: none;
+  }
+  
+  .home-feature-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    background-color: #939393;
+    border-radius: 50%;
+    color: white;
+    flex-shrink: 0;
+    margin-top: 2px;
+    margin-left: 69px;
+  }
+  
+  .home-feature-text {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #374151;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 1024px) {
+    .home-features-content {
+      gap: 60px;
+    }
+    
+    .home-features-title {
+      font-size: 3rem;
+    }
+    
+    .home-feature-text {
+      font-size: 1.125rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .home-features {
+      padding: 60px 0;
+    }
+    
+    .home-features-container {
+      padding: 0 20px;
+    }
+    
+    .home-features-content {
+      grid-template-columns: 1fr;
+      gap: 48px;
+      text-align: left;
+    }
+    
+    .home-features-title {
+      font-size: 2.5rem;
+    }
+    
+    .home-features-list {
+      gap: 0;
+    }
+    
+    .home-feature-item {
+      padding: 20px 0;
+    }
+    
+    .home-feature-text {
+      font-size: 1.125rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .home-features {
+      padding: 48px 0;
+    }
+    
+    .home-features-title {
+      font-size: 2rem;
+    }
+    
+    .home-feature-text {
+      font-size: 1rem;
+    }
+    
+    .home-feature-item {
+      padding: 18px 0;
+    }
+  }
