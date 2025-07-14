@@ -1,4 +1,4 @@
-.hero {
+.lp-hero {
     padding: 4px 1px;
     background: linear-gradient(to bottom, #ffffff, #f8fafc);
     min-height: calc(90vh - 64px);
@@ -8,10 +8,10 @@
     /* Animation */
     opacity: 0;
     transform: translateY(40px);
-    animation: hero-fade-in 0.9s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+    animation: lp-hero-fade-in 0.9s cubic-bezier(0.23, 1, 0.32, 1) forwards;
   }
 
-@keyframes hero-fade-in {
+@keyframes lp-hero-fade-in {
   to {
     opacity: 1;
     transform: translateY(0);
@@ -19,7 +19,7 @@
 }
 
   
-  .hero-container {
+  .lp-hero-container {
     max-width: 1280px;
     margin: 0 auto;
     display: grid;
@@ -28,11 +28,11 @@
     align-items: center;
   }
   
-  .hero-content {
+  .lp-hero-content {
     padding-right: 24px;
   }
   
-  .hero-title {
+  .lp-hero-title {
     font-size: 5.5rem;
     font-weight: 9000;
     line-height: 1.1;
@@ -42,7 +42,7 @@
     text-align: center;
   }
   
-  .hero-subtitle {
+  .lp-hero-subtitle {
     font-size: 1.25rem;
     line-height: 1.5;
     color: #4a5568;
@@ -50,13 +50,13 @@
     text-align: center;
   }
   
-  .search-container {
+  .lp-hero-search-container {
     position: relative;
     margin-bottom: 48px;
   }
   
   /* Search Input */
-  .search-input {
+  .lp-hero-search-input {
     width: 100%;
     padding: 16px 24px;
     font-size: 1.125rem;
@@ -66,14 +66,14 @@
     transition: all 0.2s ease;
   }
   
-  .search-input:focus {
+  .lp-hero-search-input:focus {
     outline: none;
     border-color: #4a90e2;
     box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
   }
   
   /* Search Button */
-  .search-button {
+  .lp-hero-search-button {
     position: absolute;
     right: 12px;
     top: 50%;
@@ -87,16 +87,16 @@
     transition: all 0.2s ease;
   }
   
-  .search-button:hover {
+  .lp-hero-search-button:hover {
     background: #357abd;
   }
   
-  .input-wrapper {
+  .lp-hero-input-wrapper {
     position: relative;
     width: 100%;
   }
   
-  .manual-entry {
+  .lp-hero-manual-entry {
     display: block;
     text-decoration: none;
     margin-top: 8px;
@@ -112,32 +112,32 @@
   
   
   
-  .featured-section {
+  .lp-hero-featured-section {
     display: flex;
     align-items: center;
     gap: 16px;
     margin-top:60px;
   }
   
-  .featured-text {
+  .lp-hero-featured-text {
     color: #718096;
     font-size: 0.875rem;
   }
   
-  .featured-logos {
+  .lp-hero-featured-logos {
     display: flex;
     align-items: center;
     gap: 24px;
   }
   
-  .featured-logo {
+  .lp-hero-featured-logo {
     color: #4a5568;
     font-weight: 600;
     font-size: 1rem;
     opacity: 0.7;
   }
   
-  .hero-image {
+  .lp-hero-images {
     position: relative;
     overflow: hidden;
     aspect-ratio: 3/3;
@@ -145,7 +145,7 @@
       
   }
   
-  .main-image {
+  .lp-hero-main-image {
     width: 100%;
     height: 90%;
     object-fit: cover;
@@ -156,7 +156,7 @@
 
   }
   
-  .offer-bubble {
+  .lp-hero-offer-bubble {
     position: absolute;
     display: flex;
     align-items: center;
@@ -168,7 +168,7 @@
     gap: 12px;
   }
   
-  .offer-avatar {
+  .lp-hero-offer-avatar {
     width: 32px;
     height: 32px;
     border-radius: 50%;
@@ -180,97 +180,97 @@
     font-weight: 600;
   }
   
-  .offer-avatar img {
+  .lp-hero-offer-avatar img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
   
-  .offer-content {
+  .lp-hero-offer-content {
     display: flex;
     flex-direction: column;
   }
   
-  .offer-type {
+  .lp-hero-offer-type {
     font-size: 0.75rem;
     opacity: 0.8;
   }
   
-  .offer-amount {
+  .lp-hero-offer-amount {
     font-weight: 600;
     font-size: 1rem;
   }
   
-  .offer-bubble.highest {
+  .lp-hero-offer-bubble.highest {
     top: 24px;
     right: 24px;
   }
   
-  .offer-bubble.cash {
+  .lp-hero-offer-bubble.cash {
     top: 50%;
     right: 32px;
   }
   
-  .offer-bubble.new {
+  .lp-hero-offer-bubble.new {
     bottom: 32px;
     right: 48px;
   }
   
   @media (max-width: 1024px) {
-    .hero-title {
+    .lp-hero-title {
       font-size: 3.5rem;
     }
   }
   
   @media (max-width: 768px) {
-    .hero {
+    .lp-hero {
       padding: 32px 16px;
     }
   
-    .hero-container {
+    .lp-hero-container {
       grid-template-columns: 1fr;
       gap: 32px;
     }
   
-    .hero-content {
+    .lp-hero-content {
       padding-right: 0;
       text-align: center;
     }
   
-    .hero-title {
+    .lp-hero-title {
       font-size: 2.5rem;
     }
   
-    .featured-section {
+    .lp-hero-featured-section {
       flex-direction: column;
       gap: 12px;
     }
   
-    .featured-logos {
+    .lp-hero-featured-logos {
       flex-wrap: wrap;
       justify-content: center;
     }
   
-    .offer-bubble {
+    .lp-hero-offer-bubble {
       padding: 6px 12px;
     }
   
-    .offer-avatar {
+    .lp-hero-offer-avatar {
       width: 24px;
       height: 24px;
     }
   
-    .offer-bubble.highest {
+    .lp-hero-offer-bubble.highest {
       top: 16px;
       right: 16px;
     }
   
-    .offer-bubble.cash {
+    .lp-hero-offer-bubble.cash {
       top: 45%;
       right: 24px;
     }
   
-    .offer-bubble.new {
+    .lp-hero-offer-bubble.new {
       bottom: 24px;
       right: 32px;
     }

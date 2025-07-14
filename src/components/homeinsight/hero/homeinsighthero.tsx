@@ -3,6 +3,7 @@
 import React from "react"
 import { useState } from "react"
 import { Search } from "lucide-react"
+import { Link } from "react-router-dom"
 import "./homeinsighthero.css"
 
 const HeroSection = () => {
@@ -50,6 +51,11 @@ const HeroSection = () => {
               </button>
             </div>
           </form>
+          {address.trim() && (
+            <Link to="/browse-homes" className="lp-hero-manual-entry">
+              Enter address manually instead
+            </Link>
+          )}
         </div>
 
         {/* Right Image */}

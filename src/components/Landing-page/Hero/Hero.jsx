@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './Hero.css';
 
 const Hero = () => {
@@ -11,76 +12,76 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className={`hero${animate ? ' hero-animate' : ''}`}>
-      <div className="hero-container">
-        <div className="hero-content">
-          <h1 className="hero-title">Make the easy move</h1>
-          <p className="hero-subtitle">
+    <section className={`lp-hero${animate ? ' hero-animate' : ''}`}>
+      <div className="lp-hero-container">
+        <div className="lp-hero-content">
+          <h1 className="lp-hero-title">Make the easy move</h1>
+          <p className="lp-hero-subtitle">
             "Discover the comfort of your next home before you visit. Our immersive virtual tours and detailed listings let you explore every corner with confidence."
           </p>
           
-          <div className="search-container">
-  <div className="input-wrapper">
+          <div className="lp-hero-search-container">
+  <div className="lp-hero-input-wrapper">
     <input
       type="text"
       placeholder="Enter your address"
-      className="search-input"
+      className="lp-hero-search-input"
       value={inputValue}
       onChange={(e) => setInputValue(e.target.value)}
     />
-    <button className="search-button">
+    <button className="lp-hero-search-button">
       <Search size={20} />
     </button>
   </div>
   {inputValue.trim() && (
-    <a href="#" className="manual-entry">
-    Enter address manually instead
-  </a>
+    <Link to="/browse-homes" className="lp-hero-manual-entry">
+  Enter address manually instead
+</Link>
   
   )}
 </div>
 
 
-          <div className="featured-section">
-            <span className="featured-text">Featured in:</span>
-            <div className="featured-logos">
-              <span className="featured-logo nyt">The New York Times</span>
-              <span className="featured-logo forbes">Forbes</span>
-              <span className="featured-logo wsj">WSJ</span>
-              <span className="featured-logo fortune">Fortune</span>
+          <div className="lp-hero-featured-section">
+            <span className="lp-hero-featured-text">Featured in:</span>
+            <div className="lp-hero-featured-logos">
+              <span className="lp-hero-featured-logo nyt">The New York Times</span>
+              <span className="lp-hero-featured-logo forbes">Forbes</span>
+              <span className="lp-hero-featured-logo wsj">WSJ</span>
+              <span className="lp-hero-featured-logo fortune">Fortune</span>
             </div>
           </div>
         </div>
 
-        <div className="hero-image">
+        <div className="lp-hero-images">
           <img
             src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg"
             alt="Modern house with offers"
-            className="main-image"
+            className="lp-hero-main-image"
           />
-          <div className="offer-bubble highest">
-            <div className="offer-avatar">
+          <div className="lp-hero-offer-bubble highest">
+            <div className="lp-hero-offer-avatar">
               <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Avatar" />
             </div>
-            <div className="offer-content">
-              <span className="offer-type">Highest offer</span>
-              <span className="offer-amount">$452K</span>
+            <div className="lp-hero-offer-content">
+              <span className="lp-hero-offer-type">Highest offer</span>
+              <span className="lp-hero-offer-amount">$452K</span>
             </div>
           </div>
-          <div className="offer-bubble cash">
-            <div className="offer-avatar">G</div>
-            <div className="offer-content">
-              <span className="offer-type">Cash offer</span>
-              <span className="offer-amount">$438K</span>
+          <div className="lp-hero-offer-bubble cash">
+            <div className="lp-hero-offer-avatar">G</div>
+            <div className="lp-hero-offer-content">
+              <span className="lp-hero-offer-type">Cash offer</span>
+              <span className="lp-hero-offer-amount">$438K</span>
             </div>
           </div>
-          <div className="offer-bubble new">
-            <div className="offer-avatar">
+          <div className="lp-hero-offer-bubble new">
+            <div className="lp-hero-offer-avatar">
               <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg" alt="Avatar" />
             </div>
-            <div className="offer-content">
-              <span className="offer-type">New offer</span>
-              <span className="offer-amount">$446K</span>
+            <div className="lp-hero-offer-content">
+              <span className="lp-hero-offer-type">New offer</span>
+              <span className="lp-hero-offer-amount">$446K</span>
             </div>
           </div>
         </div>

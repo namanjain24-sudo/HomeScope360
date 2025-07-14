@@ -13,10 +13,12 @@ import HowItWorksBuy from './components/HowItWorksBuy';
 import AuthSection from './components/Auth/auth-section.jsx';
 import BrowseHomes from './components/BrowseHomes';
 import HomeInsight from './components/HomeInsight';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="app">
         <Navbar />
         <Routes>

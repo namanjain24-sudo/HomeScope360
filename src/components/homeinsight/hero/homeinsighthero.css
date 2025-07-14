@@ -76,19 +76,21 @@
   .address-input-field {
     width: 100%;
     padding: 20px 60px 20px 24px;
-    border: none;
+    border: 1px solid #d1d5db !important;
     outline: none;
     font-size: 1rem;
-    color: #111827;
-    background: transparent;
+    color: #111 !important;
+    background: #fff !important;
     font-weight: 400;
     border-radius: 50px;
     box-sizing: border-box;
+    z-index: 1;
   }
   
   .address-input-field::placeholder {
-    color: #000000;
+    color: #888 !important;
     font-weight: 400;
+    opacity: 1;
   }
   
   .search-icon-btn {
@@ -297,11 +299,11 @@
     }
   
     .address-input-field {
-      color: #f9fafb;
+      color: #f9fafb; /* Light text in dark mode */
     }
   
     .address-input-field::placeholder {
-      color: #9ca3af;
+      color: #d1d5db; /* Lighter gray for dark mode */
     }
   
     .search-icon-btn {

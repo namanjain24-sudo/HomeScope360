@@ -1,12 +1,11 @@
 "use client"
+import React from 'react';
 import { Home } from "lucide-react"
+import { useNavigate } from 'react-router-dom';
 import "./caution-hero.css"
 
 const UnlockInsights = () => {
-  const handleBrowseHomes = () => {
-    console.log("Browse homes clicked")
-    // Add your browse homes navigation logic here
-  }
+  const navigate = useNavigate();
 
   return (
     <section className="unlock-insights-section">
@@ -31,7 +30,7 @@ const UnlockInsights = () => {
           </p>
 
           <div className="browse-homes-section">
-            <button className="browse-homes-button" onClick={handleBrowseHomes}>
+            <button className="browse-homes-button" onClick={() => navigate('/browse-homes')}>
               <Home size={20} />
               <span>Browse Homes</span>
             </button>

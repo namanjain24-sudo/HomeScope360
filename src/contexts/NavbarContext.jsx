@@ -1,14 +1,6 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useState } from 'react';
 
 const NavbarContext = createContext();
-
-export const useNavbar = () => {
-  const context = useContext(NavbarContext);
-  if (!context) {
-    throw new Error('useNavbar must be used within a NavbarProvider');
-  }
-  return context;
-};
 
 export const NavbarProvider = ({ children }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -37,4 +29,6 @@ export const NavbarProvider = ({ children }) => {
       {children}
     </NavbarContext.Provider>
   );
-}; 
+};
+
+export default NavbarContext; 

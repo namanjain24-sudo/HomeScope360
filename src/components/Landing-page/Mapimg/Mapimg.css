@@ -1,4 +1,4 @@
-.map-section {
+.lpmi-map-section {
     position: relative;
     width: 100%;
     height: 600px;
@@ -13,7 +13,7 @@
   }
 
   
-  .map-overlay {
+  .lpmi-map-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -23,7 +23,7 @@
     z-index: 1;
   }
   
-  .map-content {
+  .lpmi-map-content {
     position: relative;
     z-index: 2;
     max-width: 1200px;
@@ -33,13 +33,13 @@
     gap: 6rem;
   }
   
-  .stats-container {
+  .lpmi-stats-container {
     text-align: center;
     max-width: 600px;
     margin: 0 auto;
   }
   
-  .stats-badge {
+  .lpmi-stats-badge {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -50,15 +50,15 @@
     margin-bottom: 2rem;
   }
   
-  .stats-badge-dot {
+  .lpmi-stats-badge-dot {
     width: 8px;
     height: 8px;
     background-color: #10B981;
     border-radius: 50%;
-    animation: pulse 2s infinite;
+    animation: lpmi-pulse 2s infinite;
   }
   
-  .stats-title {
+  .lpmi-stats-title {
     font-size: 3.5rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
@@ -67,19 +67,19 @@
     -webkit-text-fill-color: transparent;
   }
   
-  .stats-subtitle {
+  .lpmi-stats-subtitle {
     font-size: 1.75rem;
     color: #9CA3AF;
     margin-bottom: 1.5rem;
   }
   
-  .stats-description {
+  .lpmi-stats-description {
     font-size: 1.25rem;
     margin-bottom: 2rem;
     color: #D1D5DB;
   }
   
-  .cta-button {
+  .lpmi-cta-button {
     background-color: #3B82F6;
     color: white;
     padding: 1rem 2rem;
@@ -93,24 +93,23 @@
     gap: 0.5rem;
   }
   
-  .cta-button:hover {
+  .lpmi-cta-button:hover {
     background-color: #2563EB;
     transform: translateY(-2px);
   }
   
-  .button-arrow {
+  .lpmi-button-arrow {
     transition: transform 0.3s ease;
   }
   
-  .cta-button:hover .button-arrow {
+  .lpmi-cta-button:hover .lpmi-button-arrow {
     transform: translateX(4px);
   }
   
-
   
-
   
-  @keyframes fadeSlide {
+  
+  @keyframes lpmi-fadeSlide {
     from {
       opacity: 0;
       transform: translateY(20px);
@@ -121,7 +120,7 @@
     }
   }
   
-  @keyframes pulse {
+  @keyframes lpmi-pulse {
     0% {
       transform: scale(1);
       opacity: 1;
@@ -137,7 +136,7 @@
   }
   
   @media (min-width: 768px) {
-    .map-section {
+    .lpmi-map-section {
       padding: 8rem 2rem;
     }
   
