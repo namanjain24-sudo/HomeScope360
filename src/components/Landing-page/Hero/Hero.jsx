@@ -55,8 +55,8 @@ const Hero = () => {
 
         <div className="lp-hero-images">
           <img
-            src="https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg"
-            alt="Modern house with offers"
+            src="/assets/house-ext.png"
+            alt="home exterior"
             className="lp-hero-main-image"
           />
           <div className="lp-hero-offer-bubble highest">
