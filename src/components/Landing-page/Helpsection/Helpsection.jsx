@@ -1,6 +1,6 @@
 import React from 'react';
 import { Phone, Mail, HelpCircle } from 'lucide-react';
-import './HelpSection.css';
+import './Helpsection.css';
 
 const HelpSection = () => {
   return (
