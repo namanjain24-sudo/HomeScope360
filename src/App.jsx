@@ -5,7 +5,7 @@ import Hero from './components/Landing-page/Hero/Hero.jsx';
 import CashOffer from './components/Landing-page/CashOffer/CashOffer.jsx';
 import BuyingSection from './components/Landing-page/BuyingSection/BuyingSection.jsx';
 import Mapimg from './components/Landing-page/Mapimg/Mapimg.jsx';
-import Testimonials from "./components/Landing-page/REVIEW/Testimonials.JSX";
+import Testimonials from "./components/Landing-page/REVIEW/Testimonials.jsx";
 import HomeInsightsSection from './components/Landing-page/insight/Homeinsight.jsx';
 import HelpSection from './components/Landing-page/Helpsection/Helpsection.jsx';
 import Footer from './components/Landing-page/Footer/Footer.jsx';
