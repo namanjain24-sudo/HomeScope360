@@ -104,37 +104,6 @@ const PropertyModal = ({ property, onClose, onPropertySelect, onToggleFavorite, 
             )}
           </div>
           
-          {/* Self Tour Section */}
-          {showSelfTour && (
-            <div className="self-tour-container">
-              <div className="self-tour-header">
-                <h3 className="self-tour-title">Virtual Self-Tour</h3>
-                <button onClick={() => setShowSelfTour(false)} className="self-tour-close">
-                  <X className="close-icon-small" />
-                </button>
-              </div>
-              <div className="self-tour-content">
-                {property.has360Tour ? (
-                  <div className="tour-viewer">
-                    <div className="tour-placeholder">
-                      <Maximize2 className="tour-placeholder-icon" />
-                      <p className="tour-placeholder-text">360° Virtual Tour</p>
-                      <p className="tour-placeholder-subtext">Interactive 3D experience loading...</p>
-                      <button className="tour-fullscreen-btn">
-                        <Maximize2 className="fullscreen-icon" />
-                        View Fullscreen
-                      </button>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="tour-unavailable">
-                    <p>Virtual tour not available for this property</p>
-                    <button className="contact-agent-btn">Contact Agent for Tour</button>
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
           {/* Thumbnail Strip */}
           <div className="thumbnail-strip">
             {property.images.map((image, index) => (
@@ -335,13 +304,114 @@ const PropertyModal = ({ property, onClose, onPropertySelect, onToggleFavorite, 
 
           {/* Action Buttons */}
           <div className="action-buttons">
-            <button className="action-button primary">
+            <button
+              className="action-button primary"
+              onClick={() => setShowSelfTour((prev) => !prev)}
+            >
               {showSelfTour ? 'Hide Self-tour' : 'Self-tour now'}
             </button>
             <button className="action-button secondary">
               Contact agent
             </button>
           </div>
+
+          {showSelfTour && (
+            <div
+              style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                width: '100vw',
+                height: '100vh',
+                background: 'rgba(0,0,0,0.35)',
+                zIndex: 9999,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <div
+                style={{
+                  background: '#fff',
+                  borderRadius: '32px',
+                  boxShadow: '0 8px 40px 0 rgba(0,0,0,0.18)',
+                  padding: '32px 32px 40px 32px',
+                  maxWidth: '900px',
+                  width: '90vw',
+                  minWidth: '320px',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  position: 'relative',
+                }}
+              >
+                <button
+                  onClick={() => setShowSelfTour(false)}
+                  style={{
+                    position: 'absolute',
+                    top: 24,
+                    right: 32,
+                    background: 'rgba(0,0,0,0.06)',
+                    border: 'none',
+                    borderRadius: '50%',
+                    width: 40,
+                    height: 40,
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: 24,
+                    color: '#374151',
+                    boxShadow: '0 2px 8px 0 rgba(0,0,0,0.08)',
+                    transition: 'background 0.2s',
+                  }}
+                  title="Close"
+                >
+                  <X />
+                </button>
+                <h2
+                  style={{
+                    fontSize: '2.5rem',
+                    fontWeight: 800,
+                    color: '#1a202c',
+                    margin: 0,
+                    marginBottom: 12,
+                    textAlign: 'center',
+                    letterSpacing: '-0.02em',
+                  }}
+                >
+                  {property.address}, {property.city}, {property.state} {property.zip}
+                </h2>
+                <div
+                  style={{
+                    width: '100%',
+                    height: 3,
+                    background: 'linear-gradient(90deg, #4a90e2 0%, #2563eb 100%)',
+                    borderRadius: 2,
+                    margin: '0 0 32px 0',
+                    opacity: 0.12,
+                  }}
+                />
+                <iframe
+                  src="https://my.matterport.com/show?play=1&lang=en-US&m=6yL2uKFX1NC"
+                  title="Virtual Tour"
+                  width="100%"
+                  height="500"
+                  style={{
+                    border: 'none',
+                    borderRadius: '20px',
+                    boxShadow: '0 4px 32px 0 rgba(0,0,0,0.10)',
+                    background: '#f3f4f6',
+                    minHeight: 400,
+                    maxWidth: 800,
+                    margin: '0 auto',
+                    display: 'block',
+                  }}
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </div>

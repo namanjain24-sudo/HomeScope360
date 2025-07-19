@@ -343,6 +343,18 @@
   background-color: #f9fafb;
   border-top: 1px solid #e5e7eb;
   min-height: 120px;
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: #cbd5e1 #f9fafb; /* For Firefox */
+}
+.thumbnail-strip::-webkit-scrollbar {
+  height: 8px;
+}
+.thumbnail-strip::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+.thumbnail-strip::-webkit-scrollbar-track {
+  background: #f9fafb;
 }
 
 .thumbnail {
