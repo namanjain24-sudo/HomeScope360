@@ -55,7 +55,7 @@ const Hero = () => {
 
         <div className="lp-hero-images">
           <img
-            src="src/assets/image copy 4.png"
+            src="/image copy 4.png"
             alt="home exterior"
             className="lp-hero-main-image"
           />

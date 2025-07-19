@@ -13,7 +13,7 @@ const UnlockInsights = () => {
         {/* Left House Image */}
         <div className="house-image-left">
           <img
-            src="src/assets/img.png?height=400&width=300"
+            src="/img.png?height=400&width=300"
             alt="Beautiful blue house with front porch"
             className="house-img house-img-left"
           />
@@ -40,7 +40,7 @@ const UnlockInsights = () => {
         {/* Right House Image */}
         <div className="house-image-right">
           <img
-            src="src/assets/house-ext.png"
+            src="/house-ext.png"
             alt="Modern house with contemporary design"
             className="house-img house-img-right"
           />

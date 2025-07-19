@@ -21,7 +21,7 @@ const FeaturesSection = () => {
           <div className="feature-card">
             <div className="feature-visual">
               <div className="map-visual">
-                <img src="src/assets/Map___pins.png" alt="Property search map with listings" />
+                <img src="/Map___pins.png" alt="Property search map with listings" />
               </div>
             </div>
             <div className="feature-content">
@@ -36,7 +36,7 @@ const FeaturesSection = () => {
           <div className="feature-card">
             <div className="feature-visual">
               <div className="tour-visual">
-                <img src="src/assets/Self_tour.png" alt="People walking through home entrance" />
+                <img src="/Self_tour.png" alt="People walking through home entrance" />
               </div>
             </div>
             <div className="feature-content">
@@ -51,7 +51,7 @@ const FeaturesSection = () => {
           <div className="feature-card">
             <div className="feature-visual">
               <div className="mobile-visual">
-                <img src="src/assets/mobile-app.png" alt="HomeScope360 mobile app interface" />
+                <img src="/mobile-app.png" alt="HomeScope360 mobile app interface" />
               </div>
             </div>
             <div className="feature-content">

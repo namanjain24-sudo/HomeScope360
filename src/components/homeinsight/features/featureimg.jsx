@@ -4,7 +4,7 @@ import './featureimg.css'
 function img() {
   return (
     <div>
-        <img src="src/assets/img2.png" className='feature-img'/>
+        <img src="/img2.png" className='feature-img'/>
     </div>
   )
 }

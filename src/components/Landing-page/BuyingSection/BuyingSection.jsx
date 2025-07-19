@@ -15,7 +15,7 @@ function BuySection() {
 
           <div>
             <img
-              src="./src/assets/image copy.png"
+              src="/image copy.png"
               className="comment-image"
             />
           </div>

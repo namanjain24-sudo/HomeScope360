@@ -10,7 +10,7 @@ const HeroCTASection = () => {
         <div className="hero-cta-content">
           <div className="hero-image-left">
             <div className="circular-image">
-              <img src="src/assets/house-ext.png" alt="Beautiful home exterior" />
+              <img src="/house-ext.png" alt="Beautiful home exterior" />
             </div>
           </div>
 
@@ -22,7 +22,7 @@ const HeroCTASection = () => {
 
           <div className="hero-image-right">
             <div className="circular-image">
-              <img src="src/assets/house-ext.png" alt="Beautiful home exterior" />
+              <img src="/house-ext.png" alt="Beautiful home exterior" />
             </div>
           </div>
         </div>

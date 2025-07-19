@@ -61,7 +61,7 @@ const HeroSection = () => {
         {/* Right Image */}
       
           <img
-            src="src/assets/image copy 3.png"
+            src="/image copy 3.png"
             alt="Modern house with smartphone showing home insights app displaying $550,000 valuation"
             className="house-phone-image"
           />

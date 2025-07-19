@@ -20,7 +20,7 @@ const HomeInsightsSection = () => {
 
         <div className="home-insights-image-container">
           <img 
-            src="src/assets/image copy 2.png"
+            src="/image copy 2.png"
             alt="Modern white house with dark shutters" 
             className="home-insights-house"
           />
