@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { Filter, ChevronDown } from 'lucide-react';
 import './styles/SearchFilters.css';
 
+// Find the max price from the properties dataset
+import { properties } from './data/properties';
+const MAX_PROPERTY_PRICE = Math.max(...properties.map(p => p.price));
+
 const SearchFilters = ({
   selectedBeds,
   selectedBaths,
@@ -92,14 +96,18 @@ const SearchFilters = ({
                   value={priceRange[0] || ''}
                   onChange={(e) => onPriceRangeChange([parseInt(e.target.value) || 0, priceRange[1]])}
                   className="filter-input price-input"
+                  min={0}
+                  max={MAX_PROPERTY_PRICE}
                 />
                 <span className="price-separator">to</span>
                 <input
                   type="number"
                   placeholder="Max"
-                  value={priceRange[1] === 1000000 ? '' : priceRange[1]}
-                  onChange={(e) => onPriceRangeChange([priceRange[0], parseInt(e.target.value) || 1000000])}
+                  value={priceRange[1] === MAX_PROPERTY_PRICE ? '' : priceRange[1]}
+                  onChange={(e) => onPriceRangeChange([priceRange[0], parseInt(e.target.value) || MAX_PROPERTY_PRICE])}
                   className="filter-input price-input"
+                  min={0}
+                  max={MAX_PROPERTY_PRICE}
                 />
               </div>
             </div>
@@ -109,7 +117,7 @@ const SearchFilters = ({
               onClick={() => {
                 onBedsChange(null);
                 onBathsChange(null);
-                onPriceRangeChange([0, 1000000]);
+                onPriceRangeChange([0, MAX_PROPERTY_PRICE]);
                 onPropertyTypeChange('');
                 setShowFilters(false);
               }}
