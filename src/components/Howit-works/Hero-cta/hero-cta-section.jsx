@@ -30,5 +30,4 @@ const HeroCTASection = () => {
     </section>
   )
 }
-
 export default HeroCTASection

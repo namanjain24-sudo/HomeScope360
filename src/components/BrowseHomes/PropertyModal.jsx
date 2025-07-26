@@ -310,7 +310,7 @@ const PropertyModal = ({ property, onClose, onPropertySelect, onToggleFavorite, 
             >
               {showSelfTour ? 'Hide Self-tour' : 'Self-tour now'}
             </button>
-            <button className="action-button secondary">
+            <button className="action-button secondary" title="Coming soon">
               Contact agent
             </button>
           </div>

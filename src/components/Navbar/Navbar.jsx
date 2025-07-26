@@ -6,6 +6,7 @@ import { Link } from "react-router-dom"
 import { onAuthStateChanged, signOut, updateProfile } from "firebase/auth"
 import { auth } from "../../lib/firebase"
 import "./Navbar.css"
+import { createPortal } from "react-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -45,6 +46,16 @@ const Navbar = () => {
       document.body.style.overflow = "unset"
     }
   }, [isModalOpen])
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth > 768) {
+        setIsMenuOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
@@ -199,50 +210,55 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-
-        {/* Mobile Menu */}
-        <div className={`mobile-menu ${isMenuOpen ? "show" : ""}`}>
-          <ul className="mobile-links">
-            <li>
-              <Link to="/how-it-works-buy" className="mobile-link" onClick={toggleMenu}>
-                How it works
-              </Link>
-            </li>
-            <li>
-              <Link to="/home-insight" className="mobile-link" onClick={toggleMenu}>
-                Home insights
-              </Link>
-            </li>
-            <li>
-              <Link to="/browse-homes" className="mobile-link" onClick={toggleMenu}>
-                Browse homes
-              </Link>
-            </li>
-            <li className="sign-in-mobile">
-              {user ? (
-                <button className="navbar-user-icon-btn" onClick={handleProfileClick}>
-                  {user.photoURL ? (
-                    <img src={user.photoURL || "/placeholder.svg"} alt="User" className="navbar-user-img" />
-                  ) : (
-                    <span className="navbar-user-svg-icon" aria-label="User icon">
-                      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <circle cx="18" cy="18" r="17" stroke="#333" strokeWidth="2" fill="white" />
-                        <circle cx="18" cy="14" r="6" fill="#333" />
-                        <path d="M6 29c0-4.418 5.373-8 12-8s12 3.582 12 8" fill="#333" />
-                      </svg>
-                    </span>
-                  )}
-                </button>
-              ) : (
-                <Link to="/auth" className="mobile-link" onClick={toggleMenu}>
-                  Sign in
-                </Link>
-              )}
-            </li>
-          </ul>
-        </div>
       </nav>
 
+      {/* Mobile Menu as Portal Overlay */}
+      {isMenuOpen && createPortal(
+        <>
+          <div className="mobile-menu-backdrop" onClick={toggleMenu}></div>
+          <div className={`mobile-menu show`}>
+            <ul className="mobile-links">
+              <li>
+                <Link to="/how-it-works-buy" className="mobile-link" onClick={toggleMenu}>
+                  How it works
+                </Link>
+              </li>
+              <li>
+                <Link to="/home-insight" className="mobile-link" onClick={toggleMenu}>
+                  Home insights
+                </Link>
+              </li>
+              <li>
+                <Link to="/browse-homes" className="mobile-link" onClick={toggleMenu}>
+                  Browse homes
+                </Link>
+              </li>
+              <li className="sign-in-mobile">
+                {user ? (
+                  <button className="navbar-user-icon-btn" onClick={handleProfileClick}>
+                    {user.photoURL ? (
+                      <img src={user.photoURL || "/placeholder.svg"} alt="User" className="navbar-user-img" />
+                    ) : (
+                      <span className="navbar-user-svg-icon" aria-label="User icon">
+                        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="18" cy="18" r="17" stroke="#333" strokeWidth="2" fill="white" />
+                          <circle cx="18" cy="14" r="6" fill="#333" />
+                          <path d="M6 29c0-4.418 5.373-8 12-8s12 3.582 12 8" fill="#333" />
+                        </svg>
+                      </span>
+                    )}
+                  </button>
+                ) : (
+                  <Link to="/auth" className="mobile-link" onClick={toggleMenu}>
+                    Sign in
+                  </Link>
+                )}
+              </li>
+            </ul>
+          </div>
+        </>,
+        document.body
+      )}
       {/* Professional Profile Modal */}
       {user && isModalOpen && (
         <div className={`profile-modal-overlay ${isAnimating ? "active" : ""}`} onClick={handleCloseModal}>
